@@ -558,7 +558,7 @@ jobs:
           FILE: ${{ github.event.inputs.FILE }}
         run: |
           cd kernel_workspace
-          git clone https://gitlab.com/jiujiujiu130/susfs4ksu.git -b test-gki-${{ env.KANDROID_VERSION }}-${{ env.KERNEL_VERSION }}
+          git clone https://gitlab.com/jiujiujiu130/susfs4ksu.git -b gki-${{ env.KANDROID_VERSION }}-${{ env.KERNEL_VERSION }}
           git clone https://github.com/ShirkNeko/SukiSU_patch.git
           cd kernel_platform
           echo "正在拉取susfs补丁"
