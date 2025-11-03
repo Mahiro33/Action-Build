@@ -63,8 +63,7 @@ on:
         type: string
         description: "分支名(必填)/自定义版本标识(留空不修改)/调整提交hash(留空不修改)"
         required: false
-        #default: "susfs-main/Numbersf/"
-        default: "susfs-main/Numbersf/589c38530c4808cdf9c920e3965bae259061490c"
+        default: "susfs-main/Numbersf/"
       BUILD_TIME:
         type: string
         description: "自定义构建时间 (输入F使用当前时间)"
@@ -558,7 +557,7 @@ jobs:
           FILE: ${{ github.event.inputs.FILE }}
         run: |
           cd kernel_workspace
-          git clone https://gitlab.com/jiujiujiu130/susfs4ksu.git -b gki-${{ env.KANDROID_VERSION }}-${{ env.KERNEL_VERSION }}
+          git clone https://gitlab.com/jiujiujiu130/susfs4ksu.git -b test-gki-${{ env.KANDROID_VERSION }}-${{ env.KERNEL_VERSION }}
           git clone https://github.com/ShirkNeko/SukiSU_patch.git
           cd kernel_platform
           echo "正在拉取susfs补丁"
