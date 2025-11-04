@@ -1,4 +1,4 @@
-name: Build OnePlus_SukiSU Ultra All
+7name: Build OnePlus_SukiSU Ultra All
 on:
   workflow_dispatch:
     inputs:
@@ -559,9 +559,7 @@ jobs:
           cd kernel_workspace
           git clone https://gitlab.com/simonpunk/susfs4ksu.git -b gki-${{ env.KANDROID_VERSION }}-${{ env.KERNEL_VERSION }}
           git clone https://github.com/ShirkNeko/SukiSU_patch.git
-          cd susfs4ksu
-          git checkout 085ce003bd2406d64bb244b5e079bb446359da15
-          cd ../kernel_platform
+          cd kernel_platform
           echo "正在拉取susfs补丁"
           cp ../susfs4ksu/kernel_patches/50_add_susfs_in_gki-${{ env.KANDROID_VERSION }}-${{ env.KERNEL_VERSION }}.patch ./common/
           cp ../susfs4ksu/kernel_patches/fs/* ./common/fs/
