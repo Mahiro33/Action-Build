@@ -518,9 +518,9 @@ jobs:
             USE_HASH="$GIT_HASH"
           fi
           if [[ -z "$CUSTOM_TAG" ]]; then
-            VERSION_FULL="v$KSU_API_VERSION-$USE_HASH@$BRANCH_NAME"
+            VERSION_FULL="v$KSU_API_VERSION-$USE_HASH@xqm"
           else
-            VERSION_FULL="v$KSU_API_VERSION-$USE_HASH@xqm[$USE_HASH]"
+            VERSION_FULL="v$KSU_API_VERSION-$USE_HASH@xqm"
           fi
 
           # 清理并写入 Makefile 版本信息
